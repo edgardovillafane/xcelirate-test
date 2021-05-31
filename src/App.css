@@ -1,21 +1,10 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  background-color: #282c34;
+  min-height: 100vh;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,11 +17,51 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* item box */
+.element {
+  background: green;
+  width: 96px;
+  height: 100px;
+  line-height: 104px;
+  display: inline-block;
+  margin: 5px;
+  border-radius: 1px;
+  box-sizing: border-box;
+}
+
+/* selected item box */
+.element.selected {
+  background: red;
+  color: white;
+}
+
+/* selected temp item box */
+.element.temp-selected {
+  background: gray;
+  color: white;
+}
+
+/* selection container */
+.grid {
+  position: relative;
+  width: 530px;
+  margin: 0 auto;
+}
+
+/* selection box */
+.selection-border {
+  position: absolute;
+  z-index: 99;
+}
+@media screen and (max-width: 600px) {
+  .grid {
+    width: 95vw;
   }
-  to {
-    transform: rotate(360deg);
+  .element {
+    touch-action: none;
+    width: 17vw;
+    height: 17vw;
+    line-height: 17vw;
+    margin: 1vw;
   }
 }
