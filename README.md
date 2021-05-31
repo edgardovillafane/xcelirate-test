@@ -38,4 +38,16 @@ The build is minified and the filenames include the hashes.\
 
 ### Main Features
 
-T
+- Renders a 5x5 grid and flip color after click or tap.
+- Cells can be changed by “long pressing”. Indicating on gray which cells are being “selected” and will be affected.
+- When the mouse button is released, all “selected” cells flip to the same color of the “source” cel
+- Double-click a cell setting the whole column to the same color as the cell.
+- Sending by POST to a mockup Server receiving a "status 200" response
+
+### Some details
+
+- Full compatibilty for desktop and touch screen mobile devices. Each event was render as mobile also.
+- No libraries used for scripting. 
+- CORS not allowed in postman-echo.com. Was provided another public mock server.
+
+
